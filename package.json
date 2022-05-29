@@ -37,13 +37,17 @@
     "style-loader": "^0.18.2",
     "terser-webpack-plugin": "^5.1.1",
     "uglify-loader": "^2.0.0",
-    "webpack-cli": "^4.6.0",
-    "webpack": "^5.36.2"
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
   },
   "author": "Jofferson Ramirez Tiquez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mycure-inc/vue-html-to-paper/issues"
   },
-  "homepage": "https://github.com/mycure-inc/vue-html-to-paper#readme"
+  "homepage": "https://github.com/mycure-inc/vue-html-to-paper#readme",
+  "dependencies": {
+    "browserslist": "^4.20.3",
+    "caniuse-lite": "^1.0.30001344"
+  }
 }

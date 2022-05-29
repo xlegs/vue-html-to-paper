@@ -55,12 +55,6 @@
           alert(`Element to print #${el} not found!`);
           return;
         }
-
-        // Get all stylesheets HTML
-let stylesHtml = '';
-for (const node of [...document.querySelectorAll('link[rel="stylesheet"], style')]) {
-  stylesHtml += node.outerHTML;
-}
         
         const url = '';
         const win = openWindow(url, name, specs);
@@ -69,7 +63,6 @@ for (const node of [...document.querySelectorAll('link[rel="stylesheet"], style'
         <html>
           <head>
             <title>${window.document.title}</title>
-            ${stylesHtml}
           </head>
           <body>
             ${element.innerHTML}
@@ -83,10 +76,9 @@ for (const node of [...document.querySelectorAll('link[rel="stylesheet"], style'
           win.document.close();
           win.focus();
           win.print();
-          win.close()
-          setTimeout(function () {}, 1);
+          setTimeout(function () {window.close();}, 1);
           cb();
-          }, 1000);
+        }, 1000);
           
         return true;
       };
